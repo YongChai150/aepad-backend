@@ -1,0 +1,142 @@
+
+
+#localhost
+#@baseUrl = http://localhost:3000
+
+#deployed
+@baseUrl = https://aedds-backend.herokuapp.com
+
+###For users
+GET {{baseUrl}}/users
+
+###
+GET {{baseUrl}}/users/1
+
+###
+GET {{baseUrl}}/users/login
+Content-Type: application/json
+
+{
+    "username": "test1",
+  "password": "12345678"
+}
+###
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "username": "test2",
+  "fullname": "test2",
+  "role": "entomologist",
+  "email": "yongchai97@gmail.com",
+  "password": "12345678",
+  "handphone1": "0166920346",
+  "handphone2": "0166699880"
+}
+
+
+### 
+PATCH {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+    "password": "12345678"
+}
+
+###
+DELETE {{baseUrl}}/users/2
+
+###For report
+GET {{baseUrl}}/report
+
+###
+GET {{baseUrl}}/report/9
+
+
+###
+POST {{baseUrl}}/report
+Content-Type: application/json
+
+{
+    "patientName": "Yong Chai 2",
+    "address": "pos 1 batu 3",
+    "ic": "970707015978",
+    "age": 15,
+    "dateReported": "2002-07-29"
+}
+
+
+### 
+PATCH {{baseUrl}}/report/7
+Content-Type: application/json
+
+{
+    "address": "WRYYYYYYYY"
+}
+
+### 
+DELETE {{baseUrl}}/report/10
+
+###For ovitrap
+GET {{baseUrl}}/ovitrap
+
+###
+GET {{baseUrl}}/ovitrap/3
+
+
+###
+POST {{baseUrl}}/ovitrap
+Content-Type: application/json
+
+{
+    "location": "pos 1 batu 2 JALAN BAKRI 84000 MUAR JOHOR",
+    "installWeek": 1,
+    "dateInstall": "2021-07-18",
+    "removeWeek": 5,
+    "dateRemove": "2021-08-09"
+}
+
+
+### 
+PATCH {{baseUrl}}/ovitrap/1
+Content-Type: application/json
+
+{
+    "location": "WRYYYYYYYY"
+}
+
+### 
+DELETE {{baseUrl}}/ovitrap/10
+
+###For cup
+GET {{baseUrl}}/cup
+
+###
+GET {{baseUrl}}/cup/3
+
+###
+GET {{baseUrl}}/cup/ovitrap/3
+
+###
+POST {{baseUrl}}/cup/3
+Content-Type: application/json
+
+{
+    "address": "pos 1 batu 2 ORAORAORA",
+    "marker": 2,
+    "longitude": 16.999,
+    "latitude": 5.564,
+    "ovitrapID": 3
+}
+
+
+### 
+PATCH {{baseUrl}}/cup/6
+Content-Type: application/json
+
+{
+    "result": "1000"
+}
+
+### 
+DELETE {{baseUrl}}/cup/6
