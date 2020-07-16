@@ -14,4 +14,4 @@ app.use('/users', userRouter)
 app.use('/ovitrap', ovitrapRouter)
 app.use('/cup', cupRouter)
 
-app.listen(port, () => { console.log(`Server is running on port ${port}`) })
+//app.listen(port, () => { console.log(`Server is running on port ${port}`) })
