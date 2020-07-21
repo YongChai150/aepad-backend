@@ -27,7 +27,6 @@ Content-Type: application/json
 {
     "username": "test2",
   "fullname": "test2",
-  "role": "entomologist",
   "email": "yongchai97@gmail.com",
   "password": "12345678",
   "handphone1": "0166920346",

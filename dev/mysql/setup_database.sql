@@ -19,7 +19,6 @@ CREATE TABLE IF NOT EXISTS users(
     id INT NOT NULL AUTO_INCREMENT,
     username VARCHAR(255),
     fullname VARCHAR(255),
-    role VARCHAR(255),
     email VARCHAR(255),
     password VARCHAR(255),
     handphone1 VARCHAR(255),
@@ -54,8 +53,8 @@ CREATE TABLE IF NOT EXISTS Cup(
     PRIMARY KEY (cupNo)
 );
 
-INSERT INTO users(username,fullname,role,email,password,handphone1,handphone2) VALUES
-('test1','test1','entomologist','yongchai97@gmail.com','12345678','0166920346','0166699880');
+INSERT INTO users(username,fullname,email,password,handphone1,handphone2) VALUES
+('test1','test1','yongchai97@gmail.com','12345678','0166920346','0166699880');
 
 INSERT INTO report(patientName,address,ic,age,dateReported) VALUES
 ('Yong Chai 2','pos 1 batu 3','970707015978',15,'2002-07-29');
