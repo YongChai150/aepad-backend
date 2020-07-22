@@ -23,7 +23,7 @@ class UserModel {
     }
 
     create(users) {
-        return database.query('INSERT INTO users (username,fullname,email,password,handphone1,handphone2) VALUES (?,?,?,?,?,?)', [users.username, users.fullname, users.role, users.email, users.password, users.handphone1, users.handphone2])
+        return database.query('INSERT INTO users (username,fullname,email,password,handphone1,handphone2) VALUES (?,?,?,?,?,?)', [users.username, users.fullname, users.email, users.password, users.handphone1, users.handphone2])
     }
 
     delete(id) {
